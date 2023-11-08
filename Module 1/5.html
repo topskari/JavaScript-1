@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+<p id="text"></p>
+    <script>
+        'use strict';
+        let leap = false
+        const year = +prompt('Enter a year')
+
+        if (year%4==0 && year%100!==0){
+          leap = true
+        }
+        else if (year%4==0 && year%100==0 && year%400==0){
+          leap = true
+        }
+        if (leap){
+          document.querySelector('#text').innerHTML = year + ' is a leap year';
+        }
+        else{
+          document.querySelector('#text').innerHTML = year + ' is not a leap year';
+        }
+
+    </script>
+</body>
+</html>

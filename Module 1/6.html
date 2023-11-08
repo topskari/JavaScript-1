@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+<p id="text"></p>
+    <script>
+        'use strict';
+        const answer = confirm('Should I calculate the square root?')
+        if (answer){
+          const nmbr = +prompt('Enter a number')
+          if (nmbr < 0){
+            document.querySelector('#text').innerHTML = 'The square root of a negative number is not defined.'
+          }
+          else{
+            document.querySelector('#text').innerHTML = `The square root is ${Math.sqrt(nmbr)}`
+          }
+        }
+        else{
+          document.querySelector('#text').innerHTML = 'The square root is not calculated.'
+        }
+    </script>
+</body>
+</html>

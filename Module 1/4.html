@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+<p id="name"></p>
+    <script>
+        'use strict';
+        const name = prompt('Give your name: ')
+        const classes = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw']
+        const nmbr = Math.floor(Math.random()*4+1)
+        console.log(nmbr)
+        if (nmbr == 1){
+          document.querySelector('#name').innerHTML = name +', you are '+classes[0]
+        }
+        else if (nmbr == 2){
+          document.querySelector('#name').innerHTML = name +', you are '+classes[1]
+        }
+        else if (nmbr == 3){
+          document.querySelector('#name').innerHTML = name +', you are '+classes[2]
+        }
+        else if (nmbr == 4){
+          document.querySelector('#name').innerHTML = name +', you are '+classes[3]
+        }
+
+
+    </script>
+</body>
+</html>

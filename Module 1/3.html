@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+<p id="sum"></p>
+<p id="product"></p>
+<p id="average"></p>
+    <script>
+        'use strict';
+        const lku1 = +prompt('Enter first integer')
+        const lku2 = +prompt('Enter second integer')
+        const lku3 = +prompt('Enter third integer')
+        const sum = lku1 + lku2 + lku3
+        const product = lku1 * lku2 * lku3
+        const avrg = sum / 3
+        document.querySelector('#sum').innerHTML = 'sum: ' + sum
+        document.querySelector('#product').innerHTML = 'product: '+ product
+        document.querySelector('#average').innerHTML = 'average: '+avrg
+    </script>
+</body>
+</html>
