@@ -5,11 +5,24 @@
     <title>JavaScript testing</title>
 </head>
 <body>
-<p id="text"></p>
+
+    <p id="text"></p>
+
     <script>
         'use strict';
+        const start_year = +prompt('Give the starting year')
+        const end_year = +prompt('Give the ending year')
+        let years = '<ul>'
+        for (let year=start_year; year<=end_year;year++) {
 
-        document.querySelector('#text').innerHTML = ''
+          if (year % 4 == 0 && year % 100 !== 0) {
+            years += '<li>'+year+'</li>'
+          } else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+            years += '<li>'+year+'</li>'
+          }
+        }
+        years += '</ul>'
+        document.querySelector('#text').innerHTML = years
     </script>
 </body>
 </html>

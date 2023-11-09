@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <p id="text"></p>
+    <script defer>
+        'use strict';
+        const rolls = +prompt('Give the number of dice')
+        const wanted = +prompt('Give the wanted sum of dice rolls')
+        let right_amount = 0, sum = 0
+        for (let i=1;i<=10000;i++){
+         for (let a=1;a<=rolls;a++) {
+          sum += Math.floor(Math.random() * 6 + 1)
+         }
+         if (sum==wanted){
+           right_amount++
+         }
+         sum = 0
+        }
+        const percentage = (right_amount/100).toFixed(2)
+        document.querySelector('#text').innerHTML = `Probability to get sum ${wanted} with ${rolls} dice is ${percentage}%`
+    </script>
+</body>
+</html>
