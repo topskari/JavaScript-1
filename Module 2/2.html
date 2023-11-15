@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        'use strict';
+        const amount = +prompt('Enter the amount of participants')
+        let names = [], print = '<ol>'
+        for (let i=1;i<=amount;i++) {
+          names.push(prompt('Enter participant name'))
+        }
+        names.sort()
+        for (let i=0;i<=amount-1;i++) {
+          print += '<li>'+names[i]+'</li>'
+        }
+        print += '</ol>'
+        document.querySelector('#text').innerHTML = print
+    </script>
+</body>
+</html>

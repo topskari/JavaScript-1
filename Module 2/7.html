@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        'use strict';
+        const sides = +prompt('How many sides on the die?')
+        let sum = 0
+        for (let i=1;i<=sides;i++){
+          sum += i
+        }
+        function diceroll(sides){
+          return Math.floor(Math.random()*sides+1)
+        }
+        let print ='<ul>', result = -1
+        while (result!=sides){
+          result = diceroll(sides)
+          print += '<li>'+result+'</li>'
+        }
+        print += '</ul>'
+        document.querySelector('#text').innerHTML = print
+    </script>
+</body>
+</html>

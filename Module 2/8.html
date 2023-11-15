@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        'use strict';
+        const randomarray = ['a', 'b', 'c','d']
+        function concat(stringarray){
+          let returnvalue = ''
+          for (let i=0;i<stringarray.length;i++){
+            returnvalue += stringarray[i]
+          }
+          return returnvalue
+        }
+        print = concat(randomarray)
+        document.querySelector('#text').innerHTML = print
+    </script>
+</body>
+</html>

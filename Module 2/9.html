@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const randomnumbers = [5,1,2,4,6,9,8]
+        function even(numbers){
+          let returnvalue = []
+          for (let i=0;i<numbers.length;i++){
+            if (numbers[i]%2==0){
+              returnvalue.push(numbers[i])
+            }
+          }
+          return returnvalue
+        }
+        print = even(randomnumbers)
+        console.log('Original array: ', randomnumbers)
+        console.log('New array: ', print)
+    </script>
+</body>
+</html>

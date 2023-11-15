@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let number, numbers = []
+        while(true){
+          number = prompt('Give a number')
+          if (number==0){
+            break
+          }
+          numbers.push(number)
+        }
+        numbers.sort(function(a, b) {
+          return a - b
+        })
+        numbers.reverse()
+        for(let i=0;i<numbers.length;i++){
+          console.log(numbers[i])
+        }
+    </script>
+</body>
+</html>

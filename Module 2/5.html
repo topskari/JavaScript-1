@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let numbers = []
+        while(true){
+          let number = prompt('Give a number')
+          if (numbers.includes(number)){
+            console.log('Number was already given')
+            break
+          }
+          numbers.push(number)
+        }
+        numbers.sort(function(a, b) {
+          return a - b
+        })
+        for(let i=0;i<numbers.length;i++){
+          console.log(numbers[i])
+        }
+    </script>
+</body>
+</html>

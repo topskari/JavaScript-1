@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const candidates = [], candamount = +prompt('Number of candidates?')
+        for (let i = 1;i<=candamount;i++){
+          let candidate = {
+            name : prompt(`Name for candidate ${i}`),
+            votes : 0
+          }
+          candidates.push(candidate)
+        }
+        let voteramount = +prompt('Number of voters?')
+        for (let i = 1;i<=voteramount;i++){
+          let answer = prompt('Who do you vote for?')
+          for (let i = 0;i<candidates.length;i++){
+            if (candidates[i]['name']==answer){
+              candidates[i]['votes'] += 1
+            }
+          }
+        }
+        candidates.sort(function(a, b){
+          return a['votes']-b['votes']
+        })
+        candidates.reverse()
+        console.log(`The winner is ${candidates[0]['name']} with ${candidates[0]['votes']} votes.`)
+        console.log('results:')
+        for (let i = 0;i<candidates.length;i++){
+          console.log(`${candidates[i]['name']}: ${candidates[i]['votes']} votes`)
+        }
+    </script>
+</body>
+</html>
