@@ -93,3 +93,16 @@ const picArray = [
 ];
 
 // add your code here
+const target = document.querySelector('section')
+for (let i = 0;i<picArray.length;i++){
+  let html =
+      `<article class="card">
+        <h2>${picArray[i].title}</h2>
+        <figure>
+        <img src="${picArray[i].image.medium}" alt="${picArray[i].title}">
+        <figcaption>${picArray[i].caption}</figcaption>
+        </figure>
+        <p>${picArray[i].description}</p>
+        </article>`
+  target.innerHTML += html
+}
